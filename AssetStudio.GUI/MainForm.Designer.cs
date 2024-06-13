@@ -52,6 +52,7 @@ namespace AssetStudio.GUI
             displayInfo = new System.Windows.Forms.ToolStripMenuItem();
             enableResolveDependencies = new System.Windows.Forms.ToolStripMenuItem();
             allowDuplicates = new System.Windows.Forms.ToolStripMenuItem();
+            addPathIDSuffix = new System.Windows.Forms.ToolStripMenuItem();
             skipContainer = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
@@ -265,7 +266,7 @@ namespace AssetStudio.GUI
             // 
             // optionsToolStripMenuItem
             // 
-            optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { displayAll, toolStripSeparator10, enablePreview, enableModelPreview, modelsOnly, toolStripSeparator11, displayInfo, enableResolveDependencies, allowDuplicates, skipContainer, toolStripSeparator12, toolStripMenuItem14, specifyUnityCNKey, toolStripSeparator13, toolStripMenuItem18, toolStripMenuItem19, showExpOpt });
+            optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { displayAll, toolStripSeparator10, enablePreview, enableModelPreview, modelsOnly, toolStripSeparator11, displayInfo, enableResolveDependencies, allowDuplicates, addPathIDSuffix, skipContainer, toolStripSeparator12, toolStripMenuItem14, specifyUnityCNKey, toolStripSeparator13, toolStripMenuItem18, toolStripMenuItem19, showExpOpt });
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             optionsToolStripMenuItem.Text = "Options";
@@ -346,6 +347,15 @@ namespace AssetStudio.GUI
             allowDuplicates.Text = "Allow duplicates";
             allowDuplicates.ToolTipText = "Toggle the behaviour of exporting assets.\r\nEnable to allow assets with duplicate names to be exported.";
             allowDuplicates.CheckedChanged += allowDuplicates_CheckedChanged;
+            // 
+            // addPathIDSuffix
+            // 
+            addPathIDSuffix.CheckOnClick = true;
+            addPathIDSuffix.Name = "addPathIDSuffix";
+            addPathIDSuffix.Size = new System.Drawing.Size(225, 22);
+            addPathIDSuffix.Text = "Add PathID suffix";
+            addPathIDSuffix.ToolTipText = "Toggle the behaviour of exporting assets.\r\nEnable to append the PathID to the asset name as a suffix. This ensures uniqueness of the exported asset names.";
+            addPathIDSuffix.CheckedChanged += addPathIDSuffix_CheckedChanged;
             // 
             // skipContainer
             // 
@@ -1553,6 +1563,7 @@ namespace AssetStudio.GUI
         private System.Windows.Forms.ToolStripMenuItem assetMapTypeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadCABMapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allowDuplicates;
+        private System.Windows.Forms.ToolStripMenuItem addPathIDSuffix;
     }
 }
 

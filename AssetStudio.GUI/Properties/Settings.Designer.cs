@@ -457,7 +457,19 @@ namespace AssetStudio.GUI.Properties {
                 this["allowDuplicates"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool addPathIDSuffix {
+            get {
+                return ((bool)(this["addPathIDSuffix"]));
+            }
+            set {
+                this["addPathIDSuffix"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("30")]

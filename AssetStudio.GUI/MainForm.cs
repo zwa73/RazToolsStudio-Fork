@@ -104,6 +104,7 @@ namespace AssetStudio.GUI
             modelsOnly.Checked = Properties.Settings.Default.modelsOnly;
             enableResolveDependencies.Checked = Properties.Settings.Default.enableResolveDependencies;
             allowDuplicates.Checked = Properties.Settings.Default.allowDuplicates;
+            addPathIDSuffix.Checked = Properties.Settings.Default.addPathIDSuffix;
             skipContainer.Checked = Properties.Settings.Default.skipContainer;
             assetsManager.ResolveDependencies = enableResolveDependencies.Checked;
             SkipContainer = Properties.Settings.Default.skipContainer;
@@ -2083,6 +2084,10 @@ namespace AssetStudio.GUI
         private void allowDuplicates_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.allowDuplicates = allowDuplicates.Checked;
+            Properties.Settings.Default.Save();
+        }
+        private void addPathIDSuffix_CheckedChanged(object sender, EventArgs e) {
+            Properties.Settings.Default.addPathIDSuffix = addPathIDSuffix.Checked;
             Properties.Settings.Default.Save();
         }
         private void skipContainer_CheckedChanged(object sender, EventArgs e)

@@ -300,6 +300,10 @@ namespace AssetStudio.GUI
         private static bool TryExportFile(string dir, AssetItem item, string extension, out string fullPath)
         {
             var fileName = FixFileName(item.Text);
+            // 如果Properties.Settings.Default.addPathIdSuffix为true，就在文件名后面添加item.m_PathId
+            if (Properties.Settings.Default.addPathIDSuffix) {
+                fileName += $"_{item.m_PathID}";
+            }
             fullPath = Path.Combine(dir, $"{fileName}{extension}");
             if (!File.Exists(fullPath))
             {
